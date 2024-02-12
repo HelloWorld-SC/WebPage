@@ -1,0 +1,80 @@
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: auto; /* 높이를 auto로 조정하여 내용에 맞게 자동으로 늘어나도록 함 */
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.rectangle {
+  position: relative;
+  width: 1440px;
+  height: 35px;
+  background: #f6f5f5;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px; /* 로그인 · 회원가입을 오른쪽 끝에 위치시키기 위한 패딩 */
+  align-items: center;
+  z-index: 42;
+}
+
+.login-signup,
+.login-signup-1 {
+  color: #000000;
+  font-family: var(--default-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10px; /* 로그인과 회원가입 사이의 간격 */
+  cursor: pointer;
+}
+
+.flex-row-af {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.relief-supplies-notifier,
+.international-emergency-support,
+.volunteer-service,
+.relief-supplies-support,
+.disaster-relief-logistics-center-7,
+.ask-question {
+  font-family: var(--default-font-family);
+  font-size: 20px;
+  color: #000000;
+}
+
+.rectangle-2 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.flex-row- {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.text-f,
+.text-10,
+.text-14,
+.goho-mulpyum-balsong-f,
+.nun-bi-ga-maneun-jireok-sigi,
+.nun-bi-ga-maneun-jireok-sigi-10,
+.binilro-pojanghaeseo-bakseu,
+.nun-bi-ga-maneun-jireok-sigi-11,
+.binilro-pojanghaeseo-bakseu-12,
+.nun-bi-ga-maneun-jireok-sigi-13,
+.binilro-pojanghaeseo-bakseu-14,
+.sikpum-balsong-si-yutonggihan-sobigihan-neoknakhan-jepumuro-junbi {
+  text-align: center;
+  color: #000000;
+  font-family: var(--default-font-family);
+  margin: 10px 0;
+}
+
+/* 추가적인 스타일링이 필요한 경우 여기에 작성 */

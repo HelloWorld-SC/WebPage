@@ -1,371 +1,170 @@
-import { FunctionComponent } from "react";
+import { useRef, useState, useEffect, FunctionComponent } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  GoogleLogin,
+  GoogleLoginResponse,
+  GoogleLoginResponseOffline,
+} from "react-google-login";
+
+import "./Login.css"; // 공통 스타일 시트
+
+const clientId =
+  "Y839642004651-8nvc0cub99p8n1rla04q2r3dg5oiv56q.apps.googleusercontent.com";
 
 const Login: FunctionComponent = () => {
+  const navigate = useNavigate();
+
+  const onSuccess = (
+    response: GoogleLoginResponse | GoogleLoginResponseOffline
+  ) => {
+    console.log("Login Success:", response);
+    // 로그인 성공 시 로직 처리
+  };
+
+  const onFailure = (response: any) => {
+    console.log("Login Failed:", response);
+    // 로그인 실패 시 로직 처리
+  };
+
+  const [showLogisticsDropdown, setShowLogisticsDropdown] = useState(false);
+  const [showSupportDropdown, setShowSupportDropdown] = useState(false);
+
+  const handleNavigate = (path: string) => {
+    navigate(path);
+  };
+
+  // 이미지 관련 코드
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [
+    "./images/main1.jpg",
+    "./images/main2.png",
+    "./images/main3.png",
+    "./images/main4.jpg",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 6000); // 6초마다 이미지 변경
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  const handleLoginRegisterClick = () => {
+    // 로그인/회원가입 페이지로 이동하는 로직
+    console.log("로그인/회원가입 클릭");
+    // 예: navigate('/login');
+  };
+
+  const responseGoogleSuccess = (response) => {
+    console.log("Login Success:", response);
+    // 여기에서 서버로 토큰을 보내서 검증하고, 로그인 처리를 합니다.
+    // 예: 서버에 사용자 정보 요청 -> JWT 토큰 발급 -> 로컬 스토리지에 저장
+  };
+
+  const responseGoogleFailure = (response) => {
+    console.error("Login Failed:", response);
+  };
+
   return (
-    <div
-      style={{
-        width: 1440,
-        height: 1039,
-        position: "relative",
-        background: "white",
-      }}
-    >
-      <div
-        style={{
-          width: 152,
-          height: 72,
-          left: 118,
-          top: 61,
-          position: "absolute",
-          textAlign: "center",
-          color: "black",
-          fontSize: 25,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        구호물품 <br />
-        알리미
+    <>
+      <div className="main-container">
+        <div className="rectangle" onClick={() => handleNavigate("/")}>
+          <span onClick={() => navigate("/login")} className="span-login">
+            로그인
+          </span>
+          <span onClick={() => navigate("/signup")} className="span-register">
+            회원가입
+          </span>
+        </div>
+        <div className="flex-row-bcc">
+          <span className="span-9">9</span>
+          <span className="span-5">5</span>
+          <div className="rectangle-1" />
+          <div className="rectangle-2" />
+          <div className="rectangle-3" />
+          <span className="span-emergency-support">각국 긴급지원</span>
+          <span className="span-volunteer">자원봉사</span>
+          <div className="div-relief-supplies">
+            <span className="span-gu">구</span>
+            <span className="span-ho">호</span>
+            <span className="span-mul">
+              물품
+              <br />
+              알리미
+            </span>
+          </div>
+          <span className="span-guho">구호물품 지원</span>
+          <span className="span-jae">재해구호 물류센터</span>
+          <span className="span-jil">질문하기</span>
+        </div>
+        <div className="redline"></div>
+        {/* 여기에 자식 컴포넌트를 렌더링할 수 있습니다. */}
       </div>
-      <div
-        className="Rectangle1"
-        style={{
-          width: 1440,
-          height: 35,
-          left: 0,
-          top: 0,
-          position: "absolute",
-          background: "#F6F6F6",
-        }}
-      />
-      <div
-        className="Line3"
-        style={{
-          width: 42.97,
-          height: 0,
-          left: 85,
-          top: 399.49,
-          position: "absolute",
-          transform: "rotate(39.82deg)",
-          transformOrigin: "0 0",
-          border: "4px #FFFEFE solid",
-        }}
-      ></div>
-      <div
-        className="Line4"
-        style={{
-          width: 47.73,
-          height: 0,
-          left: 1386.22,
-          top: 392.8,
-          position: "absolute",
-          transform: "rotate(138.18deg)",
-          transformOrigin: "0 0",
-          border: "4px #FFFEFE solid",
-        }}
-      ></div>
-      <div
-        className="Line5"
-        style={{
-          width: 42.97,
-          height: 0,
-          left: 1386.22,
-          top: 392.8,
-          position: "absolute",
-          transform: "rotate(-135.74deg)",
-          transformOrigin: "0 0",
-          border: "4px #FFFEFE solid",
-        }}
-      ></div>
-      <div
-        className="Line38"
-        style={{
-          width: 1460.01,
-          height: 0,
-          left: -20,
-          top: 142,
-          position: "absolute",
-          border: "3px #F12F2F solid",
-        }}
-      ></div>
-      <div
-        className="Welcome"
-        style={{
-          width: 494,
-          height: 228,
-          left: 586,
-          top: 292,
-          position: "absolute",
-          color: "black",
-          fontSize: 50,
-          fontFamily: "Inter",
-          fontWeight: "700",
-          wordWrap: "break-word",
-        }}
-      >
-        WELCOME{" "}
+
+      <div className="flex-row-cf">
+        <span className="welcome">WELCOME </span>
+        <div className="line" />
+        <div className="line-2" />
+        <div className="line-3" />
+        <span className="simple-login">간편 로그인 </span>
+        <span className="view-details">자세히보기</span>
+        <div
+          className="image"
+          onClick={() => {
+            window.location.href = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${process.env.REACT_APP_GOOGLE_AUTH_CLIENT_ID}&redirect_uri=https://bageasy.vercel.app/loading&response_type=code&scope=email+profile`;
+          }}
+        >
+          {/* 이미지 내용 또는 아이콘 */}
+        </div>
+
+        <GoogleLogin
+          clientId={
+            "839642004651-8nvc0cub99p8n1rla04q2r3dg5oiv56q.apps.googleusercontent.com"
+          }
+          buttonText="Login with Google"
+          onSuccess={onSuccess}
+          onFailure={onFailure}
+          cookiePolicy={"single_host_origin"}
+          render={(renderProps) => (
+            <button
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+            >
+              Custom Google Login Button
+            </button>
+          )}
+        />
       </div>
-      <div
-        style={{
-          width: 224,
-          height: 32,
-          left: 270,
-          top: 84,
-          position: "absolute",
-          textAlign: "center",
-          color: "black",
-          fontSize: 20,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        재해구호 물류센터{" "}
+
+      <div className="rectangle-15">
+        <span className="contact">
+          연락처
+          <br />
+          010-1234-5678
+        </span>
+        <div className="vertical-divider"></div>
+        <span className="aid-notifier">
+          구호물품 <br />
+          알리미
+        </span>
+        <div className="vertical-divider"></div>
+        <span className="university-challenge">
+          SUNGKONGHOE UNIVERSITY
+          <br />
+          Google Solution Challenge 2024
+        </span>
       </div>
-      <div
-        style={{
-          width: 224,
-          height: 32,
-          left: 538,
-          top: 82,
-          position: "absolute",
-          textAlign: "center",
-          color: "black",
-          fontSize: 20,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        구호물품 지원
-      </div>
-      <div
-        style={{
-          width: 224,
-          height: 32,
-          left: 812,
-          top: 80,
-          position: "absolute",
-          textAlign: "center",
-          color: "black",
-          fontSize: 20,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        각국 긴급지원{" "}
-      </div>
-      <div
-        style={{
-          width: 224,
-          height: 32,
-          left: 1018,
-          top: 80,
-          position: "absolute",
-          textAlign: "center",
-          color: "black",
-          fontSize: 20,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        자원봉사
-      </div>
-      <div
-        style={{
-          width: 112,
-          height: 15,
-          left: 1293,
-          top: 12,
-          position: "absolute",
-          color: "black",
-          fontSize: 12,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        로그인 · 회원가입
-      </div>
-      <div
-        className="Rectangle19"
-        style={{
-          width: 144,
-          height: 42,
-          left: 1236,
-          top: 75,
-          position: "absolute",
-          background: "#E16C6C",
-        }}
-      ></div>
-      <div
-        style={{
-          width: 107,
-          height: 29,
-          left: 1277,
-          top: 85,
-          position: "absolute",
-          color: "white",
-          fontSize: 20,
-          fontFamily: "Inter",
-          fontWeight: "700",
-          wordWrap: "break-word",
-        }}
-      >
-        질문하기
-      </div>
-      <div
-        style={{
-          width: 174,
-          height: 34,
-          left: 491,
-          top: 467,
-          position: "absolute",
-          textAlign: "center",
-          color: "#FFFAFA",
-          fontSize: 15,
-          fontFamily: "Inter",
-          fontWeight: "700",
-          wordWrap: "break-word",
-        }}
-      >
-        자세히보기
-      </div>
-      <div
-        style={{
-          width: 662,
-          height: 146,
-          left: 586,
-          top: 413,
-          position: "absolute",
-          color: "black",
-          fontSize: 50,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        간편 로그인{" "}
-      </div>
-      <img
-        className="Image4"
-        style={{
-          width: 162,
-          height: 156,
-          left: 617,
-          top: 546,
-          position: "absolute",
-        }}
-        src="https://via.placeholder.com/162x156"
-      />
-      <div
-        className="Line40"
-        style={{
-          width: 620,
-          height: 0,
-          left: 398,
-          top: 744,
-          position: "absolute",
-          border: "1px black solid",
-        }}
-      ></div>
-      <div
-        className="Rectangle7"
-        style={{
-          width: 1440,
-          height: 171,
-          left: 0,
-          top: 868,
-          position: "absolute",
-          background: "#F6F6F6",
-        }}
-      />
-      <div
-        style={{
-          width: 152,
-          height: 72,
-          left: 124,
-          top: 926,
-          position: "absolute",
-          textAlign: "center",
-          color: "black",
-          fontSize: 25,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        구호물품 <br />
-        알리미
-      </div>
-      <div
-        className="01012345678"
-        style={{
-          width: 341,
-          height: 88,
-          left: 444,
-          top: 913,
-          position: "absolute",
-          color: "black",
-          fontSize: 25,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        연락처
-        <br />
-        010-1234-5678
-      </div>
-      <div
-        className="Line36"
-        style={{
-          width: 130,
-          height: 0.74,
-          left: 367.24,
-          top: 888,
-          position: "absolute",
-          transform: "rotate(90.33deg)",
-          transformOrigin: "0 0",
-          border: "1px #A19B9B solid",
-        }}
-      ></div>
-      <div
-        className="Line37"
-        style={{
-          width: 128,
-          height: 0,
-          left: 774,
-          top: 890,
-          position: "absolute",
-          transform: "rotate(90deg)",
-          transformOrigin: "0 0",
-          border: "1px #A19B9B solid",
-        }}
-      ></div>
-      <div
-        className="SungkonghoeUniversityGoogleSolutionChallenge2024"
-        style={{
-          width: 462,
-          height: 118,
-          left: 861,
-          top: 919,
-          position: "absolute",
-          color: "black",
-          fontSize: 25,
-          fontFamily: "Inter",
-          fontWeight: "400",
-          wordWrap: "break-word",
-        }}
-      >
-        SUNGKONGHOE UNIVERSITY
-        <br />
-        Google Solution Challenge 2024
-      </div>
-    </div>
+    </>
   );
 };
 

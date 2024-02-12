@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps</title>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh9yxXYIaVAJH5-WCN_H_0t4sRNlyVO1w&callback=initMaps"></script>
+  <style>
+    .map {
+      height: 300px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="map" id="map1"></div>
+  <div class="map" id="map2"></div>
+  <div class="map" id="map3"></div>
+  <div class="map" id="map4"></div>
+  <div class="map" id="map5"></div>
+  <script>
+    function initMaps() {
+      
+      var map1 = new google.maps.Map(document.getElementById('map1'), {
+        center: { lat: 37.0662, lng: 37.3833 },
+        zoom: 12
+      });
+      addMarker(map1, { lat: 37.0662, lng: 37.3833 }, '가자안테프', '설명');
+
+      var map2 = new google.maps.Map(document.getElementById('map2'), {
+        center: { lat: 50.4501, lng: 30.5234 },
+        zoom: 12
+      });
+      addMarker(map2, { lat: 50.4501, lng: 30.5234 }, '우크라이나', '설명');
+
+      var map3 = new google.maps.Map(document.getElementById('map3'), {
+        center: { lat: 37.5635, lng: 126.989 },
+        zoom: 15
+      });
+      addMarker(map3, { lat: 37.5635, lng: 126.989 }, '서울 중구 퇴계로36가길 97', '설명');
+
+      var map4 = new google.maps.Map(document.getElementById('map4'), {
+        center: { lat: 37.6709, lng: 127.0518 },
+        zoom: 14
+      });
+      addMarker(map4, { lat: 37.6709, lng: 127.0518 }, '서울 도봉구 우이천로 470', '설명');
+
+      var map5 = new google.maps.Map(document.getElementById('map5'), {
+        center: { lat: 37.6595, lng: 127.0598 }, 
+        zoom: 14
+      });
+      addMarker(map5, { lat: 37.6595, lng: 127.0598 }, '서울 노원구 동일로227길 97', '설명');
+    }
+
+    function addMarker(map, position, title, description) {
+      var marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        title: title
+      });
+
+      var infowindow = new google.maps.InfoWindow({
+        content: '<strong>' + title + '</strong><br>' + description
+      });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+    }
+  </script>
+</body>
+</html>

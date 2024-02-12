@@ -1,0 +1,13 @@
+CLIENT_ID=839642004651-8nvc0cub99p8n1rla04q2r3dg5oiv56q.apps.googleusercontent.com
+CLIENT_SECRET=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
+
+DB는 로컬DB로 진행하면 될 것 같아용
+
+JWT_SECRET=ab439d6853722f48370016236943ddd534d9cf9d5ca64f4ae5630ee1b6d760b840a88af732e5f90110961e3ddaf2f91dcc7644756b59de1b243c8f700477e824
+
+
+https://accounts.google.com/o/oauth2/v2/auth?
+client_id=${839642004651-8nvc0cub99p8n1rla04q2r3dg5oiv56q.apps.googleusercontent.com}
+&redirect_uri=https://bageasy.vercel.app/loading
+&response_type=code
+&scope=email+profile
