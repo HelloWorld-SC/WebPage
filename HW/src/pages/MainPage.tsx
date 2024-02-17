@@ -71,7 +71,7 @@ function MainPage() {
           각국 긴급지원
           {showSupportDropdown && (
             <div className="dropdown">
-              <div onClick={() => navigate("/turkey")}>튀르키예</div>
+              <div onClick={() => navigate("/turkye")}>튀르키예</div>
               <div onClick={() => navigate("/ukraine")}>우크라이나</div>
             </div>
           )}

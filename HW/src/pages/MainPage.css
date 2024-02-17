@@ -290,7 +290,7 @@ button {
   position: relative;
   width: 1450px;
   height: 422px;
-  margin: 0 auto;
+  margin-top: 50px;
   z-index: 18;
   background-color: #292828;
 }
