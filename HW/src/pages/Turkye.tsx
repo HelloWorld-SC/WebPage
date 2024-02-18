@@ -1,129 +1,127 @@
-import { FunctionComponent } from "react";
 import "./Turkye.css";
 
 export default function Turkye() {
   return (
     <div className="main-container">
       <div className="rectangle">
-        <span className="login-signup">로그인 · 회원가입</span>
+        <span>로그인/</span>
+        <span>회원가입</span>
       </div>
-      <div className="flex-row-cc">
-        <span className="relief-supplies-notifier">
-          구호물품 <br />
-          알리미
-        </span>
-        <button className="rectangle-1" />
-        <span className="emergency-support">각국 긴급지원 </span>
-        <span className="volunteering">자원봉사</span>
-        <span className="relief-supplies-support">구호물품 지원</span>
-        <span className="disaster-relief-logistics-center">
-          재해구호 물류센터
-        </span>
-        <span className="ask-question">질문하기</span>
-      </div>
-      <div className="flex-row-bf">
-        <span className="turkiye">튀르키예 </span>
-        <span className="ukraine">우크라이나 </span>
-        <div className="line" />
-        <div className="line-2" />
-      </div>
-      <div className="flex-row-f">
-        <div className="image">
-          <div className="flex-column-ff">
-            <div className="line-3" />
-            <div className="line-4" />
-          </div>
-          <span className="view-more">자세히보기</span>
+
+      <div className="flex-row-bcc">
+        <div className="logo-container">
+          <img src="/public/images/logo.png" alt="Logo" className="logo" />
         </div>
-        <div className="line-5" />
-        <span className="turkiye-6">튀르키예 </span>
-        <div className="line-7" />
-        <span className="span-text">
-          2023년 2월 6일, 튀르키예 동남부 내륙 지역을 강타한 규모 7.7의 강진으로
+        <span className="span-emergency-support">각국 긴급지원</span>
+        <span className="span-volunteer">자원봉사</span>
+        <div className="div-relief-supplies">
+          <span className="span-guho">구호물품 지원</span>
+          <span className="span-jae">재해구호 물류센터</span>
+          <span className="span-jil">질문하기</span>
+        </div>
+      </div>
+
+      <div className="redline"></div>
+
+      <div className='flex-row'>
+        <div className='rectangle-a'>
+          <span className='disaster-relief-center-b'>재해 구호 물류센터</span>
+        </div>
+        <div className='logistics-center' />
+      </div>
+
+      <div className='flex-row-a'>
+        <div className='line' />
+        <div className='line-c' />
+      </div>
+      <div className='flex-row-cdc'>
+        <div className='line-d' />
+        <div className='line-e' />
+      </div>
+
+      <div className='flex-row-dbf'>
+        <span className='eagle-logistics'>
+          이글종합물류
           <br />
-          튀르키예와 시리아에서 인명피해가 <br />
-          이어지고 있습니다.
+        </span>
+        <span className='view-details'>자세히보기</span>
+      </div>
+
+      <div className='flex-row-f'>
+        <div className='eagle-comprehensive' />
+        <div className='rectangle-10'>
+          <button className='rectangle-11' />
+          <div className='line-12' />
+        </div>
+        <div className='eagle-logistics-13' />
+        <span className='turkiye'>튀르키예 </span>
+        <span className='gyeongin-gangwon'>경인, 강원 </span>
+        <span className='jeju-jeolla-gyeongsang-chungcheong'>
+          제주, 전라, 경상, 충청
         </span>
       </div>
-      <div className="flex-row-c">
-        <span className="span-text-8">필요 구호물품 리스트</span>
-        <div className="div-text">
-          <span className="span-text-9">
-            주한 튀르키예 대사관은 튀르키예항공과 협력하여 튀르키예로 보낼
-            구호물품을 모으고 있습니다.
-            <br />
-            필요 구호물품을 지원해 주실 수 있는 분은 아래 주소로 물품을
-            보내주시기를 부탁드리며, 물품 발송시 반드시 박스 또는 봉투 표면에
-            영문으로
+      <span className='sending-address'>
+        | 발송주소: 인천시 중구 자유무역로 107번길 20, 304-306호
+        <br />
+        | 받는이: 이글종합물류
+        <br />
+        | ARS : 010-8146-5291 박찬영 전무
+        <br />
+      </span>
+      <div className='flex-row-ef'>
+        <span className='caution'>
+          구호물품 발송 시 주의사항
+          <br />
+        </span>
+        <span className='caution-item'>ㅇ구호물품 발송 시 주의사항</span>
+        <div className='shipping-guidelines'>
+          <span className='weather-protection'>
+            눈/비가 많은 지역, 시기라 배송 중 오염을 막기 위해
           </span>
-          <span className="span-text-a"> ‘Aid Material/Turkiye’</span>
-          <span className="span-text-b">라고 표기를 해주시기 바랍니다. </span>
+          <span className='vinyl-packaging'>비닐로 포장해서 박스</span>
+          <span className='weather-protection-14'>
+            에 넣기
+            <br />
+            빠른 세관통과를 위해
+          </span>
+          <span className='vinyl-packaging-15'>
+            박스 겉면에 ‘Aid Material / Turkiye’
+          </span>
+          <span className='weather-protection-16'>
+            라고 적기
+            <br />
+            빠른 분류를 위해 어떤 물품이 들어있는지 영어로 간략하게 내용을 표기
+            <br />
+            이슬람국가라 식품류를 보낼 때
+          </span>
+          <span className='vinyl-packaging-17'>
+            돼지고기 가공품은 피하기
+            <br />
+          </span>
+          <span className='food-preparation'>
+            식품 발송 시 유통기한/소비기한 넉넉한 제품으로 준비
+          </span>
         </div>
       </div>
-      <div className="rectangle-c">
-        <span className="span-text-d">필요 물품 </span>
-        <span className="span-text-e">
-          겨울용 의류 어른/유아용, 발전기, 기저귀, 양말
-          <br />
-          겨울용 텐트, 우비, 부츠, 목도리
-          <br />
-          텐트용 매트리스, 침낭, 보온병, 모자
-          <br />
-          히터, 이불, 장갑, 코트자켓
-          <br />
-          침대, 점퍼, 바지, 손전등
-          <br />
-          세척 및 청소용품, 속옷, 생리대
-        </span>
-      </div>
-      <div className="rectangle-f">
-        <span className="possible-items">가능 물품 </span>
-        <span className="recommended-new-items">
-          새 물품 권장: 담요, 기저귀, 양말, 장갑 등<br />
-          중고물품 가능 품목: 텐트, 침낭, 보온병, 손전등, 전기히트 등<br />
-          <br />헌 옷, 의류, 신발 등 중고물품은 제외
-          <br />
-          생활용품: 비누, 치약, 수건, 청소용품 등<br />
-        </span>
-        <div className="error" />
-      </div>
-      <div className="flex-row-d">
-        <button className="rectangle-button" />
-        <span className="find-logistics-center">
-          튀르키예 구호물품 보내는 물류센터 알아보기
-        </span>
-        <span className="eagle-logistics">이글종합물류 </span>
-      </div>
-      <span className="disaster-situation">피해상황</span>
-      <div className="injured-person" />
-      <div className="flex-row-bf-10">
-        <div className="empty-div" />
-        <div className="download" />
-      </div>
-      <div className="flex-row">
-        <div className="pic-5" />
-        <div className="img-8" />
-      </div>
-      <div className="rectangle-11">
-        <div className="line-12" />
-        <div className="line-13" />
+
+      <div className="rectangle-15">
         <span className="contact">
           연락처
           <br />
           010-1234-5678
         </span>
+        <div className="vertical-divider"></div>
+        <span className="aid-notifier">
+          구호물품 <br />
+          알리미
+        </span>
+        <div className="vertical-divider"></div>
         <span className="university-challenge">
           SUNGKONGHOE UNIVERSITY
           <br />
           Google Solution Challenge 2024
         </span>
-        <span className="relief-alert">
-          구호물품 <br />
-          알리미
-        </span>
       </div>
-      <div className="line-14" />
     </div>
   );
 }
-

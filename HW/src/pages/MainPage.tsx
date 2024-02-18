@@ -58,8 +58,9 @@ function MainPage() {
       </div>
 
       <div className="flex-row-bcc">
-        <span className="span-9">9</span>
-        <span className="span-5">5</span>
+      <div className="logo-container">
+          <img src="/public/images/logo.png" alt="Logo" className="logo" />
+        </div>
         <div className="rectangle-1" />
         <div className="rectangle-2" />
         <div className="rectangle-3" />
@@ -78,15 +79,6 @@ function MainPage() {
         </span>
 
         <span className="span-volunteer">자원봉사</span>
-        <div className="div-relief-supplies">
-          <span className="span-gu">구</span>
-          <span className="span-ho">호</span>
-          <span className="span-mul">
-            물품
-            <br />
-            알리미
-          </span>
-        </div>
         <span className="span-guho">구호물품 지원</span>
         <span
           className="span-jae"
@@ -138,11 +130,19 @@ function MainPage() {
         <div className="line-8" />
       </div>
       <div className="flex-row-caa">
-        <div className="rectangle-9" />
+        
         <span className="love-and-warmth">
           사랑과 따뜻한 마음으로 올바른 구호물품을 전달합니다.
         </span>
         <span className="relief-agency-link">구호물품 관련 기관 바로가기 </span>
+        <div className="images-container">
+    <img src="./images/savethechild.jpg" alt="Save the Child" className="image-item" style={{width: "142px", height: "125px"}} />
+    <img src="./images/hopebridge.jpg" alt="Hope Bridge" className="image-item" style={{width: "164px", height: "66px"}} />
+    <img src="./images/worldvision.jpg" alt="World Vision" className="image-item" style={{width: "224px", height: "70px"}} />
+    <img src="./images/goodneighbor.jpg" alt="Good Neighbor" className="image-item" style={{width: "294px", height: "142px"}} />
+    <img src="./images/unhcr.png" alt="UNHCR" className="image-item" style={{width: "108px", height: "112px"}} />
+  </div>
+
       </div>
       <div className="rectangle-a">
         <span className="plus">+</span>

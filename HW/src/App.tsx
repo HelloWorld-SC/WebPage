@@ -1,7 +1,7 @@
 // App.tsx
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index"; // MainPage 대신 IndexPage를 import
+import MainPage from "./pages/MainPage"; 
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import MyPage from "./pages/MyPage";
@@ -12,12 +12,32 @@ import Turkye from "./pages/Turkye";
 import Questions from "./pages/Questions";
 import Ukraine from "./pages/Ukraine";
 
+import ImageMain from './pages/ImageMain';
+import ImageCenter from './pages/ImageCenter';
+import ImageCenter2 from './pages/ImageCenter2';
+import ImageCenter3 from './pages/ImageCenter3';
+
+import ImageEmergency from './pages/ImageEmergency';
+import ImageEmergency2 from './pages/ImageEmergency2';
+import ImageSupport from './pages/ImageSupport';
+import ImageGoogleLogin from './pages/ImageGoogleLogin';
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Index />} />{" "}
-        {/* MainPage를 IndexPage로 변경 */}
+        <Route path="/" element={<ImageMain />} />
+        <Route path="/imagecenter" element={<ImageCenter />} />
+        <Route path="/imagecenter2" element={<ImageCenter2 />} />
+        <Route path="/imagecenter3" element={<ImageCenter3 />} />
+
+        <Route path="/imageemergency" element={<ImageEmergency />} />
+        <Route path="/imageemergency2" element={<ImageEmergency2 />} />
+        <Route path="/imagesupport" element={<ImageSupport />} />
+        <Route path="/imageGoogleLogin" element={<ImageGoogleLogin />} />
+        
+
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/mypage" element={<MyPage />} />

@@ -1,0 +1,87 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    font-family: var(--default-font-family);
+  }
+  
+  .main-container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  
+  .rectangle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    background: #f6f5f5;
+    padding: 0 20px;
+  }
+  
+  .span-login, .span-register {
+    color: #000;
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .flex-row-bcc {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 90px;
+  }
+  
+  .span-9, .span-5, .span-emergency-support, .span-volunteer, .span-guho, .span-jae, .span-jil {
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  .span-9 {
+    color: #f12f2f;
+  }
+  
+  .span-5, .span-ho {
+    color: #474747;
+  }
+  
+  .span-gu, .span-mul, .aid-notifier, .contact, .university-challenge {
+    font-size: 25px;
+  }
+  
+  .redline {
+    height: 3px;
+    background-color: red;
+    margin-top: 20px;
+  }
+  
+  .rectangle-15 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f6f6f6;
+  }
+  
+  .vertical-divider {
+    height: 50%;
+    width: 2px;
+    background-color: #ccc;
+    margin: 0 20px;
+  }
+  
+  /* 추가적으로 필요한 공통 스타일 요소들을 여기에 작성합니다. */
+  

@@ -1,59 +1,80 @@
-import React from "react";
 import "./Support.css";
 
 export const Support = (): JSX.Element => {
   return (
-    <div className="screen">
-      <div className="text-wrapper">
-        구호물품 <br />
-        알리미
-      </div>
-      <div className="overlap">
-        <img className="line" alt="Line" src="line-1.svg" />
-        <div className="rectangle" />
-        <p className="div">
-          가뭄, 폭염, 한파 등 재난 · 재해에 구호물품을 긴급 지원합니다.
-        </p>
-        <img className="element" alt="Element" src="1.png" />
-      </div>
-      <img className="img" alt="Line" src="line-18.svg" />
-      <div className="overlap-group">
-        <div className="text-wrapper-2">로그인 · 회원가입</div>
-      </div>
-      <div className="overlap-2">
-        <img className="line-2" alt="Line" src="line-2.svg" />
-        <img className="line-3" alt="Line" src="line-3.svg" />
-        <p className="p">재해 종류별 구호물품 구성 예시</p>
-      </div>
-      <div className="overlap-3">
-        <img className="line-4" alt="Line" src="line-4.svg" />
-        <img className="line-5" alt="Line" src="line-5.svg" />
-      </div>
-      <div className="overlap-4">
-        <div className="text-wrapper-3">자세히보기</div>
-        <img className="line-6" alt="Line" src="line-7.svg" />
-        <img className="line-7" alt="Line" src="line-8.svg" />
-        <img className="line-8" alt="Line" src="line-9.svg" />
-        <img className="line-9" alt="Line" src="line-10.svg" />
-        <img className="line-10" alt="Line" src="line-11.svg" />
-        <img className="line-11" alt="Line" src="line-12.svg" />
-        <img className="line-12" alt="Line" src="line-13.svg" />
-        <img className="line-13" alt="Line" src="line-14.svg" />
-        <img className="line-14" alt="Line" src="line-17.svg" />
-        <img className="line-15" alt="Line" src="line-15.svg" />
-        <img className="line-16" alt="Line" src="line-16.svg" />
-        <p className="text-wrapper-4">재해 종류 / 지원 대상</p>
-        <div className="text-wrapper-5">태품, 호우(수해)</div>
-        <div className="text-wrapper-6">가뭄</div>
-        <div className="text-wrapper-7">폭염, 혹서</div>
-        <div className="text-wrapper-8">한파, 혹한</div>
-        <div className="text-wrapper-9">지진(생존)</div>
-        <div className="text-wrapper-10">자원봉사자용</div>
-        <div className="text-wrapper-11">어린이용</div>
-        <div className="text-wrapper-12">
-          주방용품(수세미, 고무장갑, 주방세제, 빨래비누)
+    <>
+      <div className="main-container">
+        <div className="rectangle">
+          <span>
+            로그인
+          </span>
+          <span>
+            회원가입
+          </span>
         </div>
-        <p className="text-wrapper-13">
+        <div className="flex-row-bcc">
+        <div className="logo-container">
+          <img src="/public/images/logo.png" alt="Logo" className="logo" />
+        </div>
+        <span className="span-emergency-support">각국 긴급지원</span>
+        <span className="span-volunteer">자원봉사</span>
+        <div className="div-relief-supplies">
+          <span className="span-guho">구호물품 지원</span>
+          <span className="span-jae">재해구호 물류센터</span>
+          <span className="span-jil">질문하기</span>
+        </div>
+      </div>
+        <div className="redline"></div>  
+      </div>
+      <div className='flex-row'>
+        <div className='download' />
+        <div className='rectangle-3'>
+          <span className='emergency-support-items'>
+            가뭄, 폭염, 한파 등 재난 · 재해에 구호물품을 긴급 지원합니다.
+          </span>
+        </div>
+      </div>
+      <div className='flex-row-eab'>
+        <div className='line' />
+        <div className='line-4' />
+      </div>
+      <div className='flex-row-d'>
+        <div className='line-5' />
+        <span className='example-disaster-relief-items'>
+          재해 종류별 구호물품 구성 예시
+        </span>
+        <div className='line-6' />
+      </div>
+      <div className='line-7' />
+      <div className='flex-row-bd'>
+        <span className='donation-guide'>구호물품 기부 안내</span>
+        <div className='line-8' />
+      </div>
+      <div className='rectangle-9'>
+        <div className='line-a' />
+        <div className='line-b' />
+        <span className='contact-info'>
+          연락처
+          <br />
+          010-1234-5678
+        </span>
+        <span className='university-challenge'>
+          SUNGKONGHOE UNIVERSITY
+          <br />
+          Google Solution Challenge 2024
+        </span>
+        <span className='relief-items'>
+          구호물품 <br />
+          알리미
+        </span>
+      </div>
+      <div className='line-c' />
+      <div className='flex-row-be'>
+        <div className='line-d' />
+        <div className='line-e' />
+        <span className='drought'>가뭄</span>
+        <span className='food-water'>식수, 식품류</span>
+        <span className='personal-care'>
           모포, 수건, 속옷, 세면도구세트,
           <br />
           미용티슈, 물티슈, 면장갑,
@@ -61,120 +82,156 @@ export const Support = (): JSX.Element => {
           의약품(연고, 밴드, 진통제, 파스 등),
           <br />
           황사/미세먼지마스크, 손세정제제
-        </p>
-        <div className="text-wrapper-14">식수, 식품류</div>
-        <div className="text-wrapper-15">쿨스카프, 쿨토시, 선풍기, 냉풍기</div>
-        <p className="text-wrapper-16">
-          은박담요, 헬멧, 1회용화장실, 자가발전손전등(라디오 겸용)
-        </p>
-        <p className="text-wrapper-17">
+        </span>
+        <div className='line-f' />
+        <span className='cooling-items'>쿨스카프, 쿨토시, 선풍기, 냉풍기</span>
+        <span className='heat-wave'>폭염, 혹서</span>
+        <div className='line-10' />
+      </div>
+      <div className='line-11' />
+      <div className='flex-row-12'>
+        <span className='disaster-support'>재해 종류 / 지원 대상</span>
+        <span className='specialty-items'>특화 품목</span>
+        <span className='common-items'>공통통 품목</span>
+      </div>
+      <div className='flex-row-f'>
+        <span className='detail-view'>자세히보기</span>
+        <div className='line-13' />
+      </div>
+      <div className='flex-row-14'>
+        <span className='taepum-hou-suhae'>태품, 호우(수해)</span>
+        <span className='kitchen-supplies'>
+          주방용품(수세미, 고무장갑, 주방세제, 빨래비누)
+        </span>
+      </div>
+      <div className='line-15' />
+      <div className='flex-row-afe'>
+        <span className='cold-weather-gear'>한파, 혹한 </span>
+        <span className='winter-accessories'>
           방한모, 방한장갑, 목도리, 방한양말, 방한텐트, 핫팩, 보온병
-        </p>
-        <p className="text-wrapper-18">
+        </span>
+        <div className='line-16' />
+      </div>
+      <div className='flex-row-ee'>
+        <span className='earthquake-survival'>지진(생존) </span>
+        <span className='emergency-supplies'>
+          은박담요, 헬멧, 1회용화장실, 자가발전손전등(라디오 겸용)
+        </span>
+      </div>
+      <div className='line-17' />
+      <div className='flex-row-ce'>
+        <span className='volunteer-supplies'>자원봉사자용 </span>
+        <span className='volunteer-gear'>
           수건, 물티슈, 장갑, 고무장갑, 우의, 쿨토시/ 쿨타올, 장화, 우의,
           방전마스크
-        </p>
-        <p className="text-wrapper-19">
+        </span>
+        <div className='line-18' />
+      </div>
+      <div className='flex-row-aeb'>
+        <span className='childrens-supplies'>어린이용 </span>
+        <span className='kids-gear'>
           모포, 수건, 양치세트, 미용티슈, 물티슈, 어린이용 의약품(캐릭터 밴드,
           해열제), 간소복, 양말, 손전등, 손세정제, 경량우의,
           재난안전도서(스티커북), 캐치볼, 황사/미세먼지마스크
-        </p>
-        <div className="text-wrapper-20">특화 품목</div>
-        <div className="text-wrapper-21">공통통 품목</div>
+        </span>
       </div>
-      <div className="overlap-5">
-        <div className="text-wrapper-22">구호물품 기부 안내</div>
-        <img className="line-17" alt="Line" src="line-19.svg" />
+      <div className='line-19' />
+      <div className='flex-row-eb'>
+        <div className='line-1a' />
+        <div className='line-1b' />
+        <div className='line-1c' />
+        <span className='dash'>-</span>
+        <span className='real-estate-art-etc'>부동산, 그림 등 </span>
+        <span className='etc'>기타 </span>
       </div>
-      <img className="line-18" alt="Line" src="line-31.svg" />
-      <div className="overlap-6">
-        <div className="overlap-group-2">
-          <div className="text-wrapper-23">자세히보기</div>
-          <img className="line-19" alt="Line" src="line-20.svg" />
-          <img className="line-20" alt="Line" src="line-21.svg" />
-          <img className="line-21" alt="Line" src="line-22.svg" />
-          <img className="line-22" alt="Line" src="line-23.svg" />
-          <img className="line-23" alt="Line" src="line-24.svg" />
-          <img className="line-24" alt="Line" src="line-25.svg" />
-          <img className="line-25" alt="Line" src="line-26.svg" />
-          <img className="line-26" alt="Line" src="line-27.svg" />
-          <img className="line-27" alt="Line" src="line-28.svg" />
-          <img className="line-28" alt="Line" src="line-29.svg" />
-          <img className="line-29" alt="Line" src="line-30.svg" />
-          <div className="text-wrapper-24">품목</div>
-          <div className="text-wrapper-25">의류</div>
-          <div className="text-wrapper-26">신발류</div>
-          <div className="text-wrapper-27">침구류</div>
-          <div className="text-wrapper-28">식품류</div>
-          <div className="text-wrapper-29">생활용품</div>
-          <div className="text-wrapper-30">식기류</div>
-          <div className="text-wrapper-31">의약품</div>
-          <div className="text-wrapper-32">기타</div>
-          <div className="text-wrapper-33">체육복, 속옷, 면티</div>
-          <div className="text-wrapper-34">부동산, 그림 등</div>
-          <div className="text-wrapper-35">운동화, 장화</div>
-          <div className="text-wrapper-36">춘추용 이불, 모포, 베개</div>
-          <p className="text-wrapper-37">
-            각종세제, 수세미, 고무장갑, 버너, 부탄 가스, 수건, 칫솔/치약,
-            <br />
-            생필품세트, 면도기, 생리용품 등
-          </p>
-          <p className="text-wrapper-38">
-            백미, 생수, 라면, 음료수, 빵, 즉석 밥, 김김
-          </p>
-          <p className="text-wrapper-39">
-            냄비, 프라이팬, 수저세트, 플라스틱용기 등
-          </p>
-          <p className="text-wrapper-40">
-            피부연고제, 감기약, 모기약, 플라스틱 용기 등
-          </p>
-          <div className="text-wrapper-41">-</div>
-          <div className="text-wrapper-42">필요한 구호물품</div>
-        </div>
-        <p className="text-wrapper-43">
+      <div className='line-1d' />
+      <div className='flex-row-fc'>
+        <span className='item'>품목</span>
+        <span className='needed-relief-items'>필요한 구호물품 </span>
+        <span className='unneeded-relief-items'>불필요한 구호물품</span>
+      </div>
+      <div className='flex-row-dac'>
+        <span className='view-details'>자세히보기</span>
+        <div className='line-1e' />
+      </div>
+      <div className='flex-row-1f'>
+        <span className='clothing'>의류 </span>
+        <span className='sportswear-underwear-tees'>체육복, 속옷, 면티 </span>
+        <span className='suits-womens-fashion-ties-hanbok-fashion-hats-etc'>
           양복, 여성패션의류, 넥타이, 한복, 패션 모자 등등
-        </p>
-        <div className="text-wrapper-44">구두, 부츠</div>
-        <div className="text-wrapper-45">침대용 침구세트 등</div>
-        <p className="text-wrapper-46">
+        </span>
+      </div>
+      <div className='line-20' />
+      <div className='flex-row-cb'>
+        <span className='footwear'>신발류 </span>
+        <span className='sneakers-boots'>운동화, 장화</span>
+        <span className='dress-shoes-boots'>구두, 부츠</span>
+      </div>
+      <div className='line-21' />
+      <div className='flex-row-22'>
+        <span className='chun-chu-bedding'>춘추용 이불, 모포, 베개 </span>
+        <span className='bedding'>침구류 </span>
+        <span className='bedding-set'>침대용 침구세트 등 </span>
+      </div>
+      <div className='pic-f' />
+      <div className='flex-row-23'>
+        <span className='food'>식품류 </span>
+        <span className='text-30'>
           생고기, 어패류, 일반우유, 냉장·냉동식품 등
-        </p>
-        <p className="text-wrapper-47">장롱, 침대, 쇼파 등 가구류</p>
-        <p className="text-wrapper-48">
+        </span>
+        <span className='text-31'>
+          백미, 생수, 라면, 음료수, 빵, 즉석 밥, 김김
+        </span>
+        <div className='pic-10' />
+      </div>
+      <div className='cleaning-supplies'>
+        <span className='text-32'>
+          각종세제, 수세미, 고무장갑, 버너, 부탄 가스, 수건, 칫솔/치약,
+          <br />
+          생필품세트, 면도기, 생리용품 등
+        </span>
+        <span className='household-items'>생활용품 </span>
+        <span className='text-34'>장롱, 침대, 쇼파 등 가구류</span>
+      </div>
+      <div className='img-f' />
+      <div className='tableware'>
+        <span className='text-35'>식기류 </span>
+        <span className='text-36'>
+          냄비, 프라이팬, 수저세트, 플라스틱용기 등
+        </span>
+        <span className='building-materials'>
           건축자재 벽지, 장판 등 벽돌, 시멘트, 철근, 보일러 등
-        </p>
-        <div className="text-wrapper-49">전문의약품 등</div>
-        <div className="text-wrapper-50">불필요한 구호물품</div>
+        </span>
+        <div className='pic-11' />
       </div>
-      <div className="text-wrapper-51">재해구호 물류센터</div>
-      <div className="text-wrapper-52">구호물품 지원</div>
-      <div className="overlap-7">
-        <div className="text-wrapper-53">각국 긴급지원</div>
-        <div className="text-wrapper-54">자원봉사</div>
-        <img className="rectangle-2" alt="Rectangle" src="rectangle-21.svg" />
-        <div className="text-wrapper-55">질문하기</div>
+      <div className='medications'>
+        <span className='text-38'>
+          피부연고제, 감기약, 모기약, 플라스틱 용기 등
+        </span>
+        <span className='text-39'>전문의약품 등 </span>
+        <span className='medications-24'>의약품 </span>
       </div>
-      <div className="overlap-8">
-        <div className="text-wrapper-56">
+      <div className='img-10' />
+
+      <div className="rectangle-15">
+        <span className="contact">
+          연락처
+          <br />
+          010-1234-5678
+        </span>
+        <div className="vertical-divider"></div>
+        <span className="aid-notifier">
           구호물품 <br />
           알리미
-        </div>
-        <div className="overlap-9">
-          <div className="element-2">
-            연락처
-            <br />
-            010-1234-5678
-          </div>
-          <img className="line-30" alt="Line" src="line-37.svg" />
-        </div>
-        <img className="line-31" alt="Line" src="line-36.svg" />
-        <p className="SUNGKONGHOE">
+        </span>
+        <div className="vertical-divider"></div>
+        <span className="university-challenge">
           SUNGKONGHOE UNIVERSITY
           <br />
           Google Solution Challenge 2024
-        </p>
+        </span>
       </div>
-    </div>
+    </>
   );
 };
 
